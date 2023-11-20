@@ -1,10 +1,17 @@
-from flask import Flask 
+from flask import Flask
 app = Flask(__name__)
 
+@app.route('/')
+def head():
+    return "hello word"
 
+@app.route('/second')
+def second():
+    return "This is the second page."
 
-
-
+@app.route('/third')
+def third():
+    return "This is the third page."
 
 if __name__ == '__main__':
 
